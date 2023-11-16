@@ -1,6 +1,8 @@
 package me.kc00l.adlibveins;
 
 import com.mojang.logging.LogUtils;
+
+import me.kc00l.adlibveins.structures.AVStructures;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
@@ -59,6 +61,7 @@ public class AdlibVeins {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        AVStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
